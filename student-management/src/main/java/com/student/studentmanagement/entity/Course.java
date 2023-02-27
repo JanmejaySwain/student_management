@@ -16,6 +16,6 @@ public class Course {
     private  String instructorName;
     private int duration;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "student_id",nullable = false)
+    @JoinColumn(name = "student_id",nullable = false,unique = true)
     private Student student;
 }
